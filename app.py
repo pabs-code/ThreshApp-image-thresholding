@@ -1,3 +1,4 @@
+import os
 import cv2
 import numpy as np
 import streamlit as st
@@ -90,8 +91,6 @@ def main():
                 cv2.imwrite("thresholded_image.jpg", thresholded_image)
         finally:
             # Clean up the temporary file
-            import os
-
             os.unlink(temp_filename)
 
 
