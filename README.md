@@ -28,12 +28,14 @@ Image thresholding is a fundamental operation in computer vision that separates 
 To run this application, follow these steps:
 
 1.  Install the required libraries using pip:
-    ```bash
+   
+```bash
 pip install opencv-python numpy
 ```
+
 2.  Clone the repository or copy the code into a new file.
 3.  Run the application using python:
-    ```bash
+```bash
 python image_thresholding.py
 ```
 
