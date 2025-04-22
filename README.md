@@ -1,31 +1,47 @@
 # ImageSegmenter - Thresholding Example
 
-**Description:**
+A Python application that demonstrates image thresholding using OpenCV.
 
-ImageSegmenter is a Python application designed to demonstrate image thresholding techniques for foreground/background segmentation. It provides a simple way to convert an image to grayscale and apply a threshold to isolate specific regions based on pixel intensity values. This example serves as a foundational demonstration of OpenCV's capabilities and can be easily extended for more complex image processing tasks.
+## Overview
+------------
 
-**Key Features:**
+Image thresholding is a fundamental operation in computer vision that separates the foreground from the background of an image based on pixel intensity values. This application provides a simple example of how to apply thresholding using OpenCV, with the capability to display and save the resulting image.
 
-*   **Grayscale Conversion:** Converts input images from color (BGR) to grayscale, which is essential for thresholding.
-*   **Thresholding:** Applies a binary threshold to the grayscale image, separating foreground pixels (above the threshold) from background pixels (below or equal to the threshold).
-*   **User-Defined Threshold:** Allows users to adjust the threshold value dynamically, enabling experimentation and fine-tuning of segmentation results.
-*   **Clear Visualization:** Displays both the original and thresholded images for easy visual comparison.
-*   **Error Handling:** Includes basic error handling to gracefully manage scenarios where an image cannot be read.
+## Key Features
+----------------
 
-**Dependencies:**
+*   Reads an input image file in BGR format and converts it to grayscale.
+*   Applies binary thresholding using a specified threshold value (default: 127).
+*   Displays the original and thresholded images.
+*   Saves the thresholded image to a new file.
 
-*   OpenCV (cv2):  `pip install opencv-python`
-*   NumPy: `pip install numpy`
-*   Streamlit: `pip install streamlit`
+## Prerequisites
+----------------
 
-**Usage:**
+*   Python 3.8+
+*   OpenCV 4.x
+*   NumPy
 
-1.  Run the script from your terminal using `python thresholding_example.py`.
-2.  The application will display the original and thresholded images, allowing you to adjust the threshold value and observe the effect on segmentation.
+## Installation
+---------------
 
-**Future Enhancements:**
+To run this application, follow these steps:
 
-*   More sophisticated thresholding methods (e.g., adaptive thresholding).
-*   Interactive controls for adjusting parameters in a Streamlit app.
-*   Integration with other image processing libraries.
-*   Saving the segmented image to a file.
+1.  Install the required libraries using pip:
+    ```bash
+pip install opencv-python numpy
+```
+2.  Clone the repository or copy the code into a new file.
+3.  Run the application using python:
+    ```bash
+python image_thresholding.py
+```
+
+## Usage
+---------
+
+1.  Upload an input image file using the Streamlit app.
+2.  Adjust the threshold value (default: 127) as needed.
+3.  Click "Apply Threshold" to separate the foreground from the background.
+4.  View and save the resulting thresholded image.
+
