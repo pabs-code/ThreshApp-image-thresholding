@@ -1,5 +1,4 @@
-# ImageSegmenter - Thresholding Example
-
+# Image Thresholding Tool: Segment Foreground from Background
 A Python application that demonstrates image thresholding using OpenCV.
 
 ## Overview
