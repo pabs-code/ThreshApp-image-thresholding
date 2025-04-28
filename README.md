@@ -1,4 +1,4 @@
-# Image Thresholding Tool: Segment Foreground from Background
+# Image Thresholding: Segment Foreground from Background
 
 ## Overview
 
