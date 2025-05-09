@@ -1,75 +1,112 @@
-# Image Thresholding Tool: Segment Foreground from Background
+# Image Thresholding Tool with Streamlit
 
-## Overview
+## 📚 Table of Contents
 
-Image thresholding is a fundamental operation in computer vision that separates the foreground from the background of an image based on pixel intensity values. This application demonstrates this process using both a traditional OpenCV script and a Streamlit web app, providing flexibility for different use cases.
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Technical Notes](#technical-notes)
+- [License](#license)
 
-## Key Features (Both Implementations)
-----------------
+---
 
-*   Reads an input image file in BGR format.
-*   Converts the image to grayscale.
-*   Applies binary thresholding using a specified threshold value (default: 127).
-*   Displays the original and thresholded images.
-*   Saves the thresholded image to a new file.
+## 📚 Project Overview
 
-## Prerequisites
-----------------
+This is a **Streamlit-based application** for image thresholding that segments the foreground from the background using object-oriented principles. The tool provides an intuitive interface for experimenting with different threshold values.
 
-*   Python 3.8+
-*   OpenCV 4.x
-*   NumPy
-*   Streamlit
+---
 
-## Installation & Running (OpenCV Script)
----------------
+## 📦 Features
 
-To run the traditional OpenCV script:
+- ✅ **Interactive Threshold Slider**: Adjust threshold value between 0 and 255.
+- ✅ **Image Segmentation**: Apply binary thresholding to grayscale images.
+- ✅ **Visual Comparison**: Display original and thresholded images side-by-side.
+- ✅ **Modular Architecture**: Clean, object-oriented code structure with clear separation of concerns.
 
-1.  Install the required libraries using pip:
-    ```bash
-    pip install opencv-python numpy
-    ```
-2.  Clone the repository or copy the code into a new file (e.g., `image_thresholding.py`).
-3.  Run the application using python:
-    ```bash
-    python image_thresholding.py
-    ```
+---
 
-## Installation & Running (Streamlit App)
----------------
+## 🛠️ Installation
 
-To run the Streamlit web app:
+### Prerequisites
 
-1. Clone this repository to your local machine:
-    ```sh
-    git clone https://github.com/yourusername/image-thresholding-tool.git
-    cd image-thresholding-tool
-    ```
+Install the required packages using pip:
 
-2. Install the required dependencies:
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-3. Start the Streamlit app by running:
-    ```sh
-    streamlit run app.py
-    ```
-
-4. Open your web browser and go to `http://localhost:8501` to see the app in action.
-
-
-## Usage (Streamlit App)
-
-1.  Upload an input image file using the Streamlit app.
-2.  Adjust the threshold value (default: 127) as needed via the slider.
-3.  Click "Apply Threshold" to separate the foreground from the background.
-4.  View and save the resulting thresholded image.
-
-## Dependencies
-
-- **Streamlit**: The web framework used to build the app.
-- **OpenCV-Python**: For image processing tasks like converting images to grayscale and applying thresholding.
-- **Numpy**: For handling numerical operations on arrays, though it's not strictly necessary for this specific task, it's often useful in other OpenCV operations.
+```bash
+pip install streamlit opencv-python numpy
 ```
+
+---
+
+## 🧪 Usage
+
+### 1. Run the Application
+
+Run the Streamlit app using:
+
+```bash
+streamlit run app.py
+```
+
+### 2. Upload an Image
+
+Supported formats: JPG, JPEG, PNG.
+
+### 3. Adjust Threshold
+
+Use the slider to experiment with different threshold values (0–255).
+
+---
+
+## 🧩 Code Structure
+
+### 📦 Project Architecture
+
+```
+image_thresholding_tool/
+│
+├── app.py              # Main application with OOP structure
+└── README.md           # Project explantion file
+└── requirements.txt    # file with needed libraries
+
+```
+
+---
+
+## 📊 Example Screenshots (Conceptual)
+
+| Feature          | Description                                          |
+| ---------------- | ---------------------------------------------------- |
+| Main Interface   | Streamlit app with title and instructions            |
+| Threshold Slider | Interactive slider for adjusting threshold value     |
+| Image Comparison | Side-by-side view of original and thresholded images |
+
+---
+
+## 📄 License
+
+MIT License
+
+---
+
+## 💡 Technical Notes
+
+1. **Streamlit Integration**:
+   - The app uses `streamlit` for the web interface.
+   - Requires running with `streamlit run app.py`.
+
+2. **Image Processing**:
+   - Uses OpenCV's `cv2.threshold()` for binary thresholding.
+   - Converts to grayscale before processing.
+
+3. **Temporary File Handling**:
+   - Ensures proper cleanup with `os.unlink()`.
+   - Uses `tempfile.NamedTemporaryFile` for secure file management.
+
+4. **Thresholding Behavior**:
+   - Pixels above threshold become white (255).
+   - Pixels at or below threshold become black (0).
+
+---
+
