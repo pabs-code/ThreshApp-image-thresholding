@@ -83,13 +83,7 @@ image_thresholding_tool/
 | Image Comparison | Side-by-side view of original and thresholded images |
 
 
-
-
 https://github.com/user-attachments/assets/870ed6d4-7997-4efd-bb70-be7ff7b09cde
-
-
-
-
 
 ---
 
