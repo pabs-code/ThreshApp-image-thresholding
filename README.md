@@ -86,7 +86,7 @@ image_thresholding_tool/
 
 ## 📄 License
 
-MIT License
+This project is licensed under the MIT License - see [LICENSE](https://github.com/pabs-code/image-grayscale-histogram-generator/blob/main/LICENSE) file for details.
 
 ---
 
