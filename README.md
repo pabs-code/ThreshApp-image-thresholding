@@ -1,4 +1,4 @@
-# Image Thresholding Tool with Streamlit
+# ThreshApp: Image Thresholding Tool with Streamlit
 
 ## 📚 Table of Contents
 
@@ -13,13 +13,13 @@
 
 ---
 
-## 📚 Project Overview
+## Project Overview
 
-This is a **Streamlit-based application** for image thresholding that segments the foreground from the background using object-oriented principles. The tool provides an intuitive interface for experimenting with different threshold values.
+TreshApp is a **Streamlit-based application** for image thresholding that segments the foreground from the background using. The tool provides an intuitive interface for experimenting with different threshold values.
 
 ---
 
-## 📦 Features
+## Features
 
 - ✅ **Interactive Threshold Slider**: Adjust threshold value between 0 and 255.
 - ✅ **Image Segmentation**: Apply binary thresholding to grayscale images.
@@ -28,7 +28,7 @@ This is a **Streamlit-based application** for image thresholding that segments t
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### Prerequisites
 
@@ -40,7 +40,7 @@ pip install streamlit opencv-python numpy
 
 ---
 
-## 🧪 Usage
+## Usage
 
 ### 1. Run the Application
 
@@ -60,7 +60,7 @@ Use the slider to experiment with different threshold values (0–255).
 
 ---
 
-## 🧩 Code Structure
+## Code Structure
 
 ### 📦 Project Architecture
 
@@ -75,7 +75,7 @@ image_thresholding_tool/
 
 ---
 
-## 📊 Example Screenshots and Video
+## Example Screenshots and Video
 
 | Feature          | Description                                          |
 | ---------------- | ---------------------------------------------------- |
@@ -88,13 +88,13 @@ https://github.com/user-attachments/assets/870ed6d4-7997-4efd-bb70-be7ff7b09cde
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see [LICENSE](https://github.com/pabs-code/image-grayscale-histogram-generator/blob/main/LICENSE) file for details.
 
 ---
 
-## 💡 Technical Notes
+## Technical Notes
 
 1. **Streamlit Integration**:
    - The app uses `streamlit` for the web interface.
