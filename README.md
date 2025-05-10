@@ -2,13 +2,14 @@
 
 ## 📚 Table of Contents
 
-- [Project Overview](#-project-overview)
-- [Features](#-features)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Code Structure](#-code-structure)
-- [Technical Notes](#-technical-notes)
-- [License](#-license)
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Code Structure](#code-structure)
+- [Example Screenshots and Videos (#example-screenshots-and-video)
+- [Technical Notes](#technical-notes)
+- [License](#license)
 
 ---
 
@@ -74,7 +75,7 @@ image_thresholding_tool/
 
 ---
 
-## 📊 Example Screenshots (Conceptual)
+## 📊 Example Screenshots and Video
 
 | Feature          | Description                                          |
 | ---------------- | ---------------------------------------------------- |
