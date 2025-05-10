@@ -2,13 +2,13 @@
 
 ## 📚 Table of Contents
 
-- [Project Overview](#project-overview)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Code Structure](#code-structure)
-- [Technical Notes](#technical-notes)
-- [License](#license)
+- [Project Overview](#-project-overview)
+- [Features](#-features)
+- [Installation](#-installation)
+- [Usage](#-usage)
+- [Code Structure](#-code-structure)
+- [Technical Notes](#-technical-notes)
+- [License](#-license)
 
 ---
 
