@@ -7,7 +7,7 @@
 - [Installation](#installation)
 - [Usage](#usage)
 - [Code Structure](#code-structure)
-- [Example Screenshots and Videos (#example-screenshots-and-video)
+- [Example Screenshot and Video](#example-screenshot-and-video)
 - [Technical Notes](#technical-notes)
 - [License](#license)
 
