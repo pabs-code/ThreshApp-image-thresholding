@@ -15,7 +15,7 @@
 
 ## Project Overview
 
-TreshApp is a **Streamlit-based application** for image thresholding that segments the foreground from the background using. The tool provides an intuitive interface for experimenting with different threshold values.
+TreshApp is a **Streamlit-based application** for image thresholding that segments the foreground from the background. The tool provides an intuitive interface for experimenting with different threshold values.
 
 ---
 
