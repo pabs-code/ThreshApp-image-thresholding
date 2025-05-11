@@ -7,7 +7,7 @@ import tempfile
 
 class ThresholdingApp:
     """
-    A Streamlit application for image thresholding using OOP principles.
+    A Streamlit application for image thresholding using streamlit.
 
     Attributes:
         title (str): Title of the Streamlit application
