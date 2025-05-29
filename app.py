@@ -5,7 +5,7 @@ import streamlit as st
 import tempfile
 
 
-class ThresholdingApp:
+class BinaryThresholdingApp:
     """
     A Streamlit application for image thresholding using streamlit.
 
@@ -20,7 +20,7 @@ class ThresholdingApp:
             page_title="Image Thresholding Tool",
             layout="wide"
         )
-        self.title = "Image Thresholding Tool: Segment Foreground from Background"
+        self.title = "Image Binary Thresholding Tool: Segment Foreground from Background"
         self.threshold_range = (0, 255)
 
     def _show_title(self):
@@ -80,15 +80,13 @@ class ThresholdingApp:
 
         return thresh
 
-    def run(self):
-        """Main application entry point."""
+    def main(self):
+        """Run the Streamlit application logic."""
         self._show_title()
 
-        # Process image upload
         temp_filename = self._process_upload()
 
         if temp_filename:
-            # Create threshold slider
             threshold_value = st.slider(
                 "Threshold Value",
                 min_value=self.threshold_range[0],
@@ -96,30 +94,26 @@ class ThresholdingApp:
                 value=127
             )
 
-            # Apply thresholding and display results
             thresholded_image = self._apply_thresholding(
                 temp_filename, threshold_value)
 
             if thresholded_image is not None:
-                st.image(
-                    cv2.imread(temp_filename),
-                    caption="Original Image",
-                    use_container_width=True
-                )
+                # Display original image (converted to RGB)
+                rgb_original = cv2.cvtColor(
+                    cv2.imread(temp_filename), cv2.COLOR_BGR2RGB)
+                st.image(rgb_original, caption="Original Image",
+                         use_container_width=True)
 
-                st.image(
-                    thresholded_image,
-                    caption="Thresholded Image",
-                    use_container_width=True
-                )
+                # Display thresholded image (already grayscale)
+                st.image(thresholded_image, caption="Thresholded Image",
+                         use_container_width=True)
 
-                # Optional: Save thresholded image to file
+                # Optional: Save thresholded image (in BGR format)
                 cv2.imwrite("thresholded_image.jpg", thresholded_image)
 
-            # Clean up temporary file
             os.unlink(temp_filename)
 
 
 if __name__ == "__main__":
-    app = ThresholdingApp()
-    app.run()
+    app = BinaryThresholdingApp()
+    app.main()  # Call the `main()` function to start the Streamlit application
