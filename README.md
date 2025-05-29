@@ -1,4 +1,4 @@
-# ThreshApp: Image Thresholding Tool with Streamlit
+# Grayscale Image Binary Thresholding Appllication
 
 ## 📚 Table of Contents
 
