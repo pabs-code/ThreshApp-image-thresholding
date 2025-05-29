@@ -6,7 +6,7 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Code Structure](#code-structure)
+- [Key Concepts](#key-concepts)
 - [Example Screenshot and Video](#example-screenshot-and-video)
 - [Technical Notes](#technical-notes)
 - [License](#license)
@@ -15,16 +15,27 @@
 
 ## Project Overview
 
-TreshApp is a **Streamlit-based application** for image thresholding that segments the foreground from the background. The tool provides an intuitive interface for experimenting with different threshold values.
+This is a **Streamlit-based image thresholding application** that allows users to upload images and apply binary thresholding to segment the foreground from the background. It is designed for educational purposes, image processing experimentation, and simple computer vision tasks.
+
+The app provides an intuitive interface where users can:
+- Upload images in common formats (JPG, JPEG, PNG)
+- Adjust a threshold slider to control the binarization process
+- View both the original and thresholded images side-by-side
+
+
 
 ---
 
 ## Features
 
-- ✅ **Interactive Threshold Slider**: Adjust threshold value between 0 and 255.
-- ✅ **Image Segmentation**: Apply binary thresholding to grayscale images.
-- ✅ **Visual Comparison**: Display original and thresholded images side-by-side.
-- ✅ **Modular Architecture**: Clean, object-oriented code structure with clear separation of concerns.
+| Feature | Description |
+|--------|-------------|
+| ✅ Image Upload | Supports JPG, JPEG, and PNG formats |
+| ✅ Threshold Slider | Adjust threshold value between 0 and 255 |
+| ✅ Binarization | Applies binary thresholding to images |
+| ✅ Visual Comparison | Displays original and thresholded image side-by-side |
+| ✅ Temporary File Handling | Ensures no leftover files after session ends |
+
 
 ---
 
@@ -60,18 +71,20 @@ Use the slider to experiment with different threshold values (0–255).
 
 ---
 
-## Code Structure
+## Key Concepts
 
-### 📦 Project Architecture
+| Concept | Description |
+|--------|-------------|
+| **Binary Thresholding** | Converts each pixel to either black (0) or white (255) based on a threshold value. |
+| **Threshold Value** | A pixel intensity value used to split the image into foreground and background. |
+| **Higher Threshold** | Results in fewer pixels being considered as "foreground", making the image less detailed. |
+| **Lower Threshold** | Results in more pixels being considered as "foreground", making the image more detailed. |
 
-```
-image_thresholding_tool/
-│
-├── app.py              # Main application with OOP structure
-└── README.md           # Project explantion file
-└── requirements.txt    # file with needed libraries
-
-```
+Thresholding is widely used in applications like:
+- Document scanning
+- Object detection
+- Medical imaging
+- Optical character recognition (OCR)
 
 ---
 
@@ -91,26 +104,6 @@ https://github.com/user-attachments/assets/870ed6d4-7997-4efd-bb70-be7ff7b09cde
 ## License
 
 This project is licensed under the MIT License - see [LICENSE](https://github.com/pabs-code/image-grayscale-histogram-generator/blob/main/LICENSE) file for details.
-
----
-
-## Technical Notes
-
-1. **Streamlit Integration**:
-   - The app uses `streamlit` for the web interface.
-   - Requires running with `streamlit run app.py`.
-
-2. **Image Processing**:
-   - Uses OpenCV's `cv2.threshold()` for binary thresholding.
-   - Converts to grayscale before processing.
-
-3. **Temporary File Handling**:
-   - Ensures proper cleanup with `os.unlink()`.
-   - Uses `tempfile.NamedTemporaryFile` for secure file management.
-
-4. **Thresholding Behavior**:
-   - Pixels above threshold become white (255).
-   - Pixels at or below threshold become black (0).
 
 ---
 
