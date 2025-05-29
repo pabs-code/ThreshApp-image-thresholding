@@ -8,7 +8,6 @@
 - [Usage](#usage)
 - [Key Concepts](#key-concepts)
 - [Example Screenshot and Video](#example-screenshot-and-video)
-- [Technical Notes](#technical-notes)
 - [License](#license)
 
 ---
